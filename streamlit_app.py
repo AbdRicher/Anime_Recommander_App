@@ -28,5 +28,5 @@ Select_anime = st.selectbox("Select the Anime Name",Anime_names["Name"].values)
 animes = Recommand(Select_anime)
 
 if st.button("Recommand", type="primary"):
-    for i in animes:
-        st.write(i)
+    for indexes,i in enumerate(animes):
+        st.write(f"Top {indexes+1} : ",i)
